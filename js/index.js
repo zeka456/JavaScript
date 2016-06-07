@@ -15,17 +15,19 @@ function validate(form)
 
     if(login.value==""){
     flagLogin = false;
-    login.className = "ks1";
+    login.classList.add("ks1");
 }
     else{
     flagLogin = true;
+    login.classList.remove("ks1");
 }
     if(pass.value==""){
     flagPass = false;
-    pass.className = "ks1";
+    pass.classList.add("ks1");
 }
     else{
     flagPass = true;
+    login.classList.remove("ks1");
 }
     if(flagLogin == true && flagPass == true){
     return true;
