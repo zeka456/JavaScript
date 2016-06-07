@@ -6,18 +6,31 @@ document.getElementById("submit").onclick=function(event)
 {
 	return validate();
 }
-
 function validate(form)
 {
 	var login = document.getElementById("text1")
 	var pass = document.getElementById("text2")
-	var flag = false;
-    if(login.value == "")
-    {   
-    	login.className = "ks1";
-    }
-    else if (pass.value == "")
-    {
-        pass.className = "ks1";
-    }
+    var flagLogin = false;
+    var flagPass = false;
+
+    if(login.value==""){
+    flagLogin = false;
+    login.className = "ks1";
+}
+    else{
+    flagLogin = true;
+}
+    if(pass.value==""){
+    flagPass = false;
+    pass.className = "ks1";
+}
+    else{
+    flagPass = true;
+}
+    if(flagLogin == true && flagPass == true){
+    return true;
+}
+    else{
+    return false;
+}
 }
